@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+  <head> 
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsstore@1.5.2"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body class="container">
+    <div id="imageUploaderArea" class="row col-sm-12">
+        <div id="divDragDrop">
+            <input style="display:none" type="file" id="inputImageUpload" onchange="uploadImage(this);" />
+            <label for="inputImageUpload">
+                <span class="upload-icon">
+                    <i class="fa fa-upload" aria-hidden="true"></i>
+                </span>
+                <strong>Выбрать изображение</strong>
+                <span class="box__dragndrop"> или перетянуть сюда</span></label>
+            <div id="imageToUploadOuter" class="col-sm-12" style="display: none">
+                <img src="" id="imageToUpload" />
+                <div id="cancelImage">Отменить</div>
+                <div id="addImage">Добавить</div>
+            </div>
+        </div>
+    </div>
+    <div id="uploadedImageList" class="row col-sm-12 panel panel-default">
+        <div class="panel-heading">Загруженные изображения
+            <button id="btnClearImages" class="btn btn-danger pull-right">Очистить галерею</button>
+        </div>
+        <div class="panel-body"></div>
+    </div>
+    <div id="selectedImagePreview" class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer"> 
+                
+                     
+                
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
